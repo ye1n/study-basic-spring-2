@@ -1,6 +1,4 @@
 package hello.core;
-
-import hello.core.discount.FixDiscountPolicy;
 import hello.core.discount.RateDiscountPolicy;
 import hello.core.member.MemberService;
 import hello.core.member.MemberServiceImpl;
@@ -10,6 +8,7 @@ import hello.core.order.OrderServiceImpl;
 
 public class AppConfig {
 
+    // IoC 컨테이너, DI 컨테이너
     // 객체의 생성과 연결을 담당, 생성자 주입
     public MemberService memberService() {
         return new MemberServiceImpl(new MemoryMemberRepository());
