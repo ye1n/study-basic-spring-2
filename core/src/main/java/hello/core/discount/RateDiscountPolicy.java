@@ -1,5 +1,6 @@
 package hello.core.discount;
 
+import hello.core.annotation.MainDiscountPolicy;
 import hello.core.member.Grade;
 import hello.core.member.Member;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -8,6 +9,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Primary    //  @Autowired 시에 여러 빈이 매칭되면 @Primary 가 우선권을 가짐
+@MainDiscountPolicy
 //@Qualifier("mainDiscountPolicy")
 public class RateDiscountPolicy implements DiscountPolicy{
 
